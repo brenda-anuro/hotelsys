@@ -1,10 +1,14 @@
 <%- include('../partials/header')%>
 
 <main id="admin-login">
-    <form action="">
+    <form action="/admin/login" method="post">
         <h1>Login</h1>
-        <input type="email" placeholder="Email Address">
-        <input type="password" placeholder="password">
+
+        <%if(error){%>
+            <p class="error"><%= message %></p>
+        <% } %>
+        <input type="email" value="<%= admin.email%>" name="email" placeholder="Email Address">
+        <input type="password" value="<%= admin.password %>" name="password" placeholder="password">
         <input type="submit" value="Log In">
     </form>
 </main>
