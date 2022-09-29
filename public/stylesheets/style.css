@@ -16,6 +16,15 @@
   box-sizing: border-box;
   font-family: Karla-Regular;
 }
+.error{
+  background-color: #f51720;
+  color: #fff;
+  text-align: center;
+  padding: 4px;
+  border-radius: 5px;
+  font-family: Karla-light;
+}
+
 /* admin login page */
 
 #admin-login{
@@ -39,6 +48,20 @@
 }
 #admin-login h1{
   text-align: center;
+}
+
+#admin-login input{
+  font-size: 20px;
+  padding: 7px;
+}
+#admin-login input[type="submit"]{
+  background-color: #fa26a0;
+  border: 1px solid #fa26a0;
+  color: #fff;
+}
+#admin-login input[type="submit"]:hover{
+  background-color: #c91c81;
+  border-color: #c91c81;
 }
 /* end admin login page */
 
