@@ -1,5 +1,23 @@
 <%- include('partials/header')%>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <%- include('partials/footer')%>
+    <main id="home-page">
+        <div id="sidebar">
+            <div id="logo">
+
+                <img src="/images/logo1.png" alt="">
+                <h1>Borcelle Restaurant</h1>
+            </div>
+            <ul>
+                <li>starter</li>
+                <li>main dish </li>
+                <li>dessert</li>
+            </ul>
+        </div>
+        <div id="menu-list">
+            <div id="items"></div>
+            <div id="order"></div>
+
+        </div>
+
+    </main>
+<%- include('partials/footer')%>
 
