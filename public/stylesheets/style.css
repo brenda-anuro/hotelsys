@@ -36,7 +36,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f3f4f5;
+  background-image: url('../images/login-bg.jpg');
+  background-position: center;
 
 }
 
@@ -66,13 +67,13 @@
   padding: 7px;
 }
 #admin-login input[type="submit"]{
-  background-color: #fa26a0;
-  border: 1px solid #fa26a0;
+  background-color: #f68712;
+  border: 1px solid #f68712;
   color: #fff;
 }
 #admin-login input[type="submit"]:hover{
-  background-color: #c91c81;
-  border-color: #c91c81;
+  background-color: #e07a0c;
+  border-color: #e07a0c;
 }
 /* end admin login page */
 
@@ -111,3 +112,44 @@ nav a:hover{
 
 /* end nav */
 
+/* home page */
+#home-page{
+  height: 100vh;
+  display: flex;
+
+}
+#sidebar{
+  width: 300px;
+  background-color: #f3f4f5;
+  color: #383838;
+}
+#logo {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0;
+  text-align: center;
+  font-size: 18px;
+
+}
+
+#sidebar img{
+  width: 64px;
+  height: 64px;
+  
+
+}
+#sidebar li {
+  font-size: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #383838;
+}
+#sidebar li:hover{
+  background-color: #dddfe0;
+}
+
+
+
+
+
+
+/* end homepage */
