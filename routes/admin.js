@@ -20,12 +20,19 @@ router.get('/', function(req, res, next) {
 });
 
 // display admin login page
+
 router.get('/login', (req, res, next)=>{
-  const admin = {
-    email: '',
-    password: ''
+  if (res.locals.isLoggedIn) {
+    res.redirect('/admin')
+  } else {
+    const admin = {
+      email: '',
+      password: ''
+    }
+    res.render('admin/login', {title: 'login', admin:admin, error:false});
+    
   }
-  res.render('admin/login', {title: 'login', admin:admin, error:false});
+
 })
 // submit admin login page
 router.post('/login',(req, res, next)=>{
