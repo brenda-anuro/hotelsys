@@ -135,6 +135,7 @@ nav a:hover{
 #home-page{
   height: 100vh;
   display: flex;
+  gap: 30px;
 
 }
 #sidebar{
@@ -184,5 +185,45 @@ nav a:hover{
   bottom: 0;
 
 }
+#menu-list{
+  flex-grow:1;
+  padding: 10px;
+
+}
+
+#main-dish, #dessert{
+  display: none;
+
+}
+#items{
+  height: 60vh;
+  background-color: #dddfe0;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  
+}
+#order{
+  height: 35vh;
+  background-color: #dddfe0;
+  border-radius: 20px;
+  margin-right: 10px;
+
+
+
+}
 
 /* end homepage */
+
+
+
+
+
+
+
+
+
+
+
+
+
