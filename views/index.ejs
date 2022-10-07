@@ -7,19 +7,31 @@
                 <h1>Borcelle Restaurant</h1>
             </div>
             <ul>
-                <li><img src="/images/starter.png" alt=""> starter</li>
-                <li><img src="/images/main-dish.png" alt=""> main dish </li>
-                <li><img src="/images/cake.png" alt=""> dessert</li>
+                <li class="btn"><img src="/images/starter.png" alt=""> starter</li>
+                <li class="btn"><img src="/images/main-dish.png" alt=""> main dish </li>
+                <li class="btn"><img src="/images/cake.png" alt=""> dessert</li>
             </ul>
                 <a href="/admin/login" id="admin-console"><img src="/images/waiter.png" alt="">Admin</a>
 
         </div>
         <div id="menu-list">
-            <div id="items"></div>
+            <div id="items">
+                <div id="starter" class="item">
+                    <h1>starter</h1>
+                </div>
+                <div id="main-dish" class="item">
+                    <h1>main dish</h1>
+                </div>
+                <div id="dessert" class="item">
+                    <h1>dessert</h1>
+                </div>
+            </div>
             <div id="order"></div>
 
         </div>
 
     </main>
+    <script src="/javascripts/menu.js"></script>
+
 <%- include('partials/footer')%>
 
