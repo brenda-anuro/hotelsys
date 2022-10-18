@@ -1,0 +1,30 @@
+<%- include(../partials/header)%>
+
+    <%- include('../partials/nav')%>
+
+    <form action="/admin/create" method="post" enctype="multipart/form-data">
+        <h1>create menu</h1>
+        <label for="category"></label>
+        <select name="category" id="" required>
+            
+            <option>Select Category</option>
+            <option value="starter">starter</option>
+            <option value="main dish">main dish</option>
+            <option value="dessert">dessert</option>
+
+        </select>
+        <label for="">name</label>
+        <input type="text" name="name" id="" required>
+        <label for="">description</label>
+        <input type="text" name="description" id="" required>
+
+        <label for="">picture</label>
+        <input type="file" name="picture" id="" required>
+
+        <label for="">price</label>
+        <input type="text" name="price" id="" required>
+            <input type="submit" value="save">
+    </form>
+
+    <%- include('../partials/footer')%>
+
