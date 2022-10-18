@@ -1,6 +1,8 @@
 var express = require('express');
 const app = require('../app');
 var router = express.Router();
+var multer = require('multer');
+const uploads = multer({dest: 'public/uploads'})
 
 
 const adminCredentials = {
@@ -67,6 +69,20 @@ router.get('/logout', (req, res)=>{
     res.redirect('/admin/login')
   })
 })
+
+// create menu 
+router.get('/create', (req, res)=>{
+  if (res.locals.isLoggedIn) {
+    res.render('admin/create-menu')
+  } else {
+    res.redirect('/admin/login')
+  }
+})
+
+router.post('/create', (req, res)=>{
+  
+})
+
 
 
 module.exports = router;
