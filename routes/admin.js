@@ -1,5 +1,6 @@
 var express = require('express');
 const app = require('../app');
+const connection = require('../db_config')
 var router = express.Router();
 var multer = require('multer');
 const uploads = multer({dest: 'public/uploads'})
@@ -79,10 +80,33 @@ router.get('/create', (req, res)=>{
   }
 })
 
-router.post('/create', (req, res)=>{
-  
-})
+router.post('/create', uploads.single('picture'), (req, res)=>{
+  const menu ={
+    category: req.body.category,
+    name: req.body.name,
+    description: req.body.description,
+    picture: req.file.filename,
+    price: req.body.price
 
+  }
+  let sql = 'INSERT INTO menu (name, category, description, picture, price) VALUES (?,?,?,?,?)'
+connection.query(
+  sql,
+  [menu.category,
+    menu.name,
+    menu.description,
+    menu.picture,
+    menu.price
+    
+  ],
+
+  (error, results)=>{
+    console.log('menu item successfully added')
+    res.redirect('/admin')
+  }
+)
+
+})
 
 
 module.exports = router;
