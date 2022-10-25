@@ -1,7 +1,8 @@
-<%- include(../partials/header)%>
+<%- include('../partials/header')%>
 
     <%- include('../partials/nav')%>
 
+   <main class="container" id="create-menu">
     <form action="/admin/create" method="post" enctype="multipart/form-data">
         <h1>create menu</h1>
         <label for="category"></label>
@@ -26,5 +27,6 @@
             <input type="submit" value="save">
     </form>
 
+   </main>
     <%- include('../partials/footer')%>
 
