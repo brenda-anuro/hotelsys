@@ -1,9 +1,17 @@
 var express = require('express');
 var router = express.Router();
+var connection = require('../db_config')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  let sql = 'SELECT * FROM menu'
+  connection.query(
+    sql,(error, results)=>{
+      res.render('index', { menuItems: results });
+      console.log(results)
+    }
+  )
+ 
 });
 
 // login page
