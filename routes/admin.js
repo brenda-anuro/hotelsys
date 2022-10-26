@@ -89,11 +89,11 @@ router.post('/create', uploads.single('picture'), (req, res)=>{
     price: req.body.price
 
   }
-  let sql = 'INSERT INTO menu (name, category, description, picture, price) VALUES (?,?,?,?,?)'
+  let sql = 'INSERT INTO menu ("name 1", category, description, picture, price) VALUES (?,?,?,?,?)'
 connection.query(
   sql,
-  [menu.category,
-    menu.name,
+  [menu.name,
+    menu.category,
     menu.description,
     menu.picture,
     menu.price
