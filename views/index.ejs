@@ -17,13 +17,43 @@
         <div id="menu-list">
             <div id="items">
                 <div id="starter" class="item">
-                    <h1>starter</h1>
+            
+                    <% menuItems.filter(menu => menu.category === 'starter').forEach(menu=>{ %> 
+                        <div class="menu">
+                            <div>
+                                <img src="/uploads/<%= menu.picture %>" alt="">
+                            </div>
+                            <h2><%= menu['name 1']%></h2>
+                            <p><%= menu.description%></p>
+                            <h3>KES <%= menu.price%></h3>
+                        </div>
+                    <% }) %>
                 </div>
                 <div id="main-dish" class="item">
-                    <h1>main dish</h1>
+                    
+                    <% menuItems.filter(menu => menu.category === 'main dish').forEach(menu=>{ %> 
+                        <div class="menu">
+                            <div>
+                                <img src="/uploads/<%= menu.picture %>" alt="">
+                            </div>
+                            <h2><%= menu['name 1']%></h2>
+                            <p><%= menu.description%></p>
+                            <h3>KES <%= menu.price%></h3>
+                        </div>
+                    <% }) %>
                 </div>
                 <div id="dessert" class="item">
-                    <h1>dessert</h1>
+                    
+                    <% menuItems.filter(menu => menu.category === 'dessert').forEach(menu=>{ %> 
+                        <div class="menu">
+                            <div>
+                                <img src="/uploads/<%= menu.picture %>" alt="">
+                            </div>
+                            <h2><%= menu['name 1']%></h2>
+                            <p><%= menu.description%></p>
+                            <h3>KES <%= menu.price%></h3>
+                        </div>
+                    <% }) %>
                 </div>
             </div>
             <div id="order"></div>
