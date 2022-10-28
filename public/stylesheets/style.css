@@ -201,6 +201,7 @@ nav a:hover{
   border-radius: 20px;
   margin-right: 10px;
   margin-bottom: 15px;
+  padding: 10px;
   
 }
  .item{
@@ -212,15 +213,31 @@ nav a:hover{
   display: flex;
   flex-direction: column;
   gap: 5px;
+  width: 250px;
+  margin-right: 15px;
+  text-align: center;
+  margin-bottom: 15px;
 
  }
- .menu div{
-  width: 250px;
-  height: 250px;
-  border: 1px solid black;
+.menu div{
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+ .menu h3{
+  color: #e07a0c;
+
  }
+ .menu p{
+  font-family: Karla-Light;
+ }
+ 
  .menu img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
  }
 
 
@@ -229,6 +246,7 @@ nav a:hover{
   background-color: #dddfe0;
   border-radius: 20px;
   margin-right: 10px;
+  padding: 10px;
 
 
 
@@ -244,7 +262,9 @@ nav a:hover{
     margin: 0 auto;
     
   }
-
+ #order-list{
+  margin-left: 20px;
+ }
 
 
 /* end create menu */
