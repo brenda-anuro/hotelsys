@@ -2,6 +2,8 @@ let btns = document.querySelectorAll('.btn')
 let items = document.querySelectorAll('.item')
 let orderList = document.querySelector('#order-list')
 let menus = document.querySelectorAll('.menu')
+let amount = document.querySelector('#amount')
+
 
 btns.forEach(btn=>{
     btn.addEventListener('click', ()=>{
@@ -12,12 +14,51 @@ btns.forEach(btn=>{
         item.style.display = 'flex'
     })
 })
+    
+
+
 menus.forEach(menu =>{
     menu.addEventListener('click', ()=>{
         let li = document.createElement('li')
         let itemName = menu.children[1].textContent
         let itemPrice = menu.lastElementChild.textContent.split('KES ')[1]
-        li.innerHTML = `${menu.children[1].textContent} - <span>${itemPrice}</span>`
+        li.innerHTML = `${menu.children[1].textContent} : <span class = 'price'>${itemPrice}</span>`
+        let img = document.createElement ('img')
+        img.style.marginLeft = '7px'
+   
+        img.src = '/images/remove.png'
+      
+        img.addEventListener('click', removeItem)
+        li.appendChild(img)
         orderList.appendChild(li)
+        checkOrderList()
     })
 })
+
+// remove items from list
+const removeItem = (e)=>{
+    let item = e.target.parentElement
+    orderList.removeChild(item)
+    checkOrderList()
+}
+
+
+
+// show amount and make order button  only if orderlist has items
+const checkOrderList =() =>{
+    if (orderList.children.length === 0) {
+        orderList.nextElementSibling.style.display ='none'
+    
+    } else {
+        orderList.nextElementSibling.style.display = 'block'
+        let total = 0
+        let prices= document.querySelectorAll('.price')
+        prices.forEach(price => total += parseInt(price.textContent))
+        
+        amount.textContent = `Total: KES ${total}`
+    
+    }
+    
+}
+checkOrderList()
+
