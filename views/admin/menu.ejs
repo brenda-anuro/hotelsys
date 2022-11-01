@@ -1,0 +1,41 @@
+<%- include('../partials/header')%>
+<%- include('../partials/nav')%>
+    <main class="container" id="admin-menu">
+
+        <div class="list" id="starter">
+            <% menuItems.filter(menu => menu.category === 'starter').forEach(menu =>{ %>
+                <div class="menu">
+                    <div><img src="/uploads/<%= menu.picture%>" alt=""></div>
+                    <h2><%= menu.name %></h2>
+                    <p><%= menu.description %></p>
+                    <h3>KES <%= menu.price %></h3>
+                </div>
+            <% }) %>
+
+        </div>
+        <div class="list" id="main-dish">
+            <% menuItems.filter(menu => menu.category === 'main dish').forEach(menu =>{ %>
+                <div class="menu">
+                    <div><img src="/uploads/<%= menu.picture%>" alt=""></div>
+                    <h2><%= menu.name %></h2>
+                    <p><%= menu.description %></p>
+                    <h3>KES <%= menu.price %></h3>
+                </div>
+            <% }) %>
+            
+        </div>
+        <div class="list" id="dessert">
+            <% menuItems.filter(menu => menu.category === 'dessert').forEach(menu =>{ %>
+                <div class="menu">
+                    <div><img src="/uploads/<%= menu.picture%>" alt=""></div>
+                    <h2><%= menu.name %></h2>
+                    <p><%= menu.description %></p>
+                    <h3>KES <%= menu.price %></h3>
+                </div>
+            <% }) %>
+            
+        </div>
+
+    </main>
+
+<%- include('../partials/footer')%>
