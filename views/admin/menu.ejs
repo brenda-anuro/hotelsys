@@ -9,17 +9,25 @@
                     <h2><%= menu.name %></h2>
                     <p><%= menu.description %></p>
                     <h3>KES <%= menu.price %></h3>
+                    <div>
+                        <a href="/admin/edit/<%= menu.Id%>">edit</a>
+                    </div>
                 </div>
+
             <% }) %>
 
         </div>
         <div class="list" id="main-dish">
             <% menuItems.filter(menu => menu.category === 'main dish').forEach(menu =>{ %>
+
                 <div class="menu">
                     <div><img src="/uploads/<%= menu.picture%>" alt=""></div>
                     <h2><%= menu.name %></h2>
                     <p><%= menu.description %></p>
                     <h3>KES <%= menu.price %></h3>
+                    <div>
+                        <a href="/admin/edit/<%= menu.Id%>">edit</a>
+                    </div>
                 </div>
             <% }) %>
             
@@ -31,6 +39,9 @@
                     <h2><%= menu.name %></h2>
                     <p><%= menu.description %></p>
                     <h3>KES <%= menu.price %></h3>
+                    <div>
+                        <a href="/admin/edit/<%= menu.Id%>">edit</a>
+                    </div>
                 </div>
             <% }) %>
             
