@@ -101,10 +101,48 @@ connection.query(
   ],
 
   (error, results)=>{
-    console.log('menu item successfully added')
-    res.redirect('/admin')
+    
+    res.redirect('/admin/menu')
   }
 )
+
+})
+
+router.get('/menu', (req, res)=>{
+  if (res.locals.isLoggedIn) {
+    let sql = 'SELECT * FROM menu'
+    connection.query(
+      sql, (error, results)=>{
+        res.render('admin/menu', {menuItems: results})
+      }
+    )
+    
+  } else {
+    res.redirect('/admin/login')
+  }
+})
+router.get('/edit/:id',(req, res)=>{
+  if (res.locals.isLoggedIn) {
+    let sql = 'SELECT * FROM menu WHERE id = ?'
+    connection.query(
+      sql,
+      [ parseInt(req.params.id) ],
+      (error, results)=>{
+        res.render('admin/edit-menu', {menu: results [0]})
+
+      }
+
+    )
+    
+  } else {
+    res.redirect('/admin/login')
+  }
+
+})
+
+// update menu
+
+router.post('/edit/:id', (req, res)=>{
 
 })
 
