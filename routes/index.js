@@ -8,7 +8,6 @@ router.get('/', function(req, res, next) {
   connection.query(
     sql,(error, results)=>{
       res.render('index', { menuItems: results });
-      console.log(results)
     }
   )
  
