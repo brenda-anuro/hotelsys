@@ -8,6 +8,7 @@
         <label for="category"></label>
         <select name="category" id="" required>
             
+            <option value="<%=menu.category%>"><%= menu.category%></option>
             <option>Select Category</option>
             <option value="starter">starter</option>
             <option value="main dish">main dish</option>
@@ -31,11 +32,13 @@
         </div>
         <div id="new-picture">
             <label for="">picture</label>
-        <input type="file" name="picture" id="" value="<%=  %>" required>
+        <input type="file" name="picture" id="" value="<%=  %>">
         </div>
 
-        
+            <div>
+                <a href="/admin/menu">Cancel</a>
             <input type="submit" value="save">
+        </div>
     </form>
 
    </main>
@@ -48,6 +51,7 @@
             if (radioBtn.value === 'yes') {
                 changePicDiv.previousElementSibling.style.display = 'none'
                 changePicDiv.nextElementSibling.style.display = 'block'
+                changePicDiv.nextElementSibling.lastElementChild.setAttribute('required', '')
 
                 
             } else {
