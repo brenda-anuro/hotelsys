@@ -267,7 +267,7 @@ nav a:hover{
 
 }
 
-#order a{
+#order input[type='submit']{
   text-decoration: none;
   background-color: #e07a0c;
   border: 1px solid #e07a0c;
@@ -312,7 +312,7 @@ nav a:hover{
   margin-top: 15px;
 }
 #admin-menu .list{
-  width: 30%;
+  width: 33%;
   padding: 5px;
   background-color: #dddfe0;
   border-radius: 10px;
@@ -325,8 +325,35 @@ nav a:hover{
 /* end admin menu */
 
 
+.edit-btn a{
+  color: red;
+  padding: 100px;
+  
+}
+.edit-btn input{
+  background-color: #f8343b;
+  width: 30%;
+  height: 30px;
+  border-radius: 10px;
+  color: white;
+  font-family: Karla-Bold;
+  font-size: 15px;
+ 
+  
+ 
+}
+
+.edit-btn input:hover{
+  background-color: rgb(232, 1, 1);
+}
 
 
+#change-pic{
+  margin: 10px;
+  font-family: Karla-Bold;
+  padding-left: 40px;
+
+}
 
 
 
