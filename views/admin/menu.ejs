@@ -11,6 +11,9 @@
                     <h3>KES <%= menu.price %></h3>
                     <div>
                         <a href="/admin/edit/<%= menu.Id%>">edit</a>
+                        <form action="/admin/delete/<%= menu.Id%>" method="post">
+                            <input type="submit" value="delete">
+                        </form>
                     </div>
                 </div>
 
@@ -27,6 +30,9 @@
                     <h3>KES <%= menu.price %></h3>
                     <div>
                         <a href="/admin/edit/<%= menu.Id%>">edit</a>
+                        <form action="/admin/delete/<%= menu.Id%>" method="post">
+                            <input type="submit" value="delete">
+                        </form>
                     </div>
                 </div>
             <% }) %>
@@ -41,6 +47,9 @@
                     <h3>KES <%= menu.price %></h3>
                     <div>
                         <a href="/admin/edit/<%= menu.Id%>">edit</a>
+                        <form action="/admin/delete/<%= menu.Id%>" method="post">
+                            <input type="submit" value="delete">
+                        </form>
                     </div>
                 </div>
             <% }) %>
