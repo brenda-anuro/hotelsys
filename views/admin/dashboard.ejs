@@ -2,6 +2,45 @@
 
     <%- include('../partials/nav')%>
     <main class="container">
+        <h3>Orders</h3>
+            <table id="order-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>ORDER LIST</th>
+                        <th>AMOUNT</th>
+                        <th>DATE AND TIME</th>
+                        <th>action</th>
+                    </tr>
+                    
+                   
+                </thead>
+                <tbody>
+
+                    <% orders.forEach(order =>{%>
+                        <tr class="record">
+                            <td><%= `${orders.indexOf(order)+1}` %></td>
+                            <td>
+                                
+                                    <% JSON.parse(order.items).forEach(item => {%>
+                                        <p><%= item %></p>
+                                    <%}) %>
+                                
+                            </td>
+                            <td><%= order.amount %></td>
+                            <td><%= order.order_on.toString().split(' GMT')[0] %></td>
+                            <td>
+                                <form action="/admin/order/<%= order.id %>" method="post">
+                                    <input type="submit" value="complete">
+                                </form>
+                            </td>
+                        </tr>
+
+            
+                    <% })%>
+                </tbody>
+            </table>
+
         
     </main>
 
